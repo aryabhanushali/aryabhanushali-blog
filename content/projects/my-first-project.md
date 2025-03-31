@@ -13,8 +13,3 @@ This project is a patient tracking system that helps hospitals and clinics monit
   <source src="https://aryabhanushali.github.io/aryabhanushali-blog/videos/PatientTracking.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-
-
----
-
-
