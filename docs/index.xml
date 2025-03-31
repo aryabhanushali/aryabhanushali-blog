@@ -15,5 +15,19 @@
       <guid>https://aryabhanushali.github.io/aryabhanushali-blog/posts/my-first-post/</guid>
       <description>&lt;p&gt;Welcome to my first post on Arya Bhanushali&amp;rsquo;s blog! 🎉&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>About Me</title>
+      <link>https://aryabhanushali.github.io/aryabhanushali-blog/about/</link>
+      <pubDate>Mon, 31 Mar 2025 12:00:00 +0000</pubDate>
+      <guid>https://aryabhanushali.github.io/aryabhanushali-blog/about/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m Arya Bhanushali, a Computer Science student specializing in AI and HCI at Georgia Tech.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First Project</title>
+      <link>https://aryabhanushali.github.io/aryabhanushali-blog/projects/my-first-project/</link>
+      <pubDate>Mon, 31 Mar 2025 10:00:00 +0000</pubDate>
+      <guid>https://aryabhanushali.github.io/aryabhanushali-blog/projects/my-first-project/</guid>
+      <description>&lt;p&gt;This is my first project using Hugo with PaperMod! 🚀&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
