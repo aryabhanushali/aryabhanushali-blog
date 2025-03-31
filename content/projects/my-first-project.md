@@ -9,8 +9,8 @@ draft: false
 This project is a patient tracking system that helps hospitals and clinics monitor patient progress and improve healthcare outcomes.
 
 ### 🎥 Watch the Demo
-<video controls width="100%" poster="/aryabhanushali-blog/images/patient-tracking-thumbnail.png">
-  <source src="/aryabhanushali-blog/videos/PatientTracking.mp4" type="video/mp4">
+<video controls width="100%" poster="/images/patient-tracking-thumbnail.png">
+  <source src="/videos/PatientTracking.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
