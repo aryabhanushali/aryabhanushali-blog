@@ -10,7 +10,7 @@ This project is a patient tracking system that helps hospitals and clinics monit
 
 ### 🎥 Watch the Demo
 <video controls width="100%" poster="/images/patient-tracking-thumbnail.png">
-  <source src="/videos/PatientTracking.mp4" type="video/mp4">
+  <source src="https://aryabhanushali.github.io/aryabhanushali-blog/videos/PatientTracking.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
