@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Projects on Arya Bhanushali Blog</title>
-    <link>https://aryabhanushali.github.io/aryabhanushali-blog/projects/</link>
+    <link>https://aryabhanushali.github.io/blog/projects/</link>
     <description>Recent content in Projects on Arya Bhanushali Blog</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 31 Mar 2025 10:00:00 +0000</lastBuildDate>
-    <atom:link href="https://aryabhanushali.github.io/aryabhanushali-blog/projects/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://aryabhanushali.github.io/blog/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Patient Tracking System</title>
-      <link>https://aryabhanushali.github.io/aryabhanushali-blog/projects/my-first-project/</link>
+      <link>https://aryabhanushali.github.io/blog/projects/my-first-project/</link>
       <pubDate>Mon, 31 Mar 2025 10:00:00 +0000</pubDate>
-      <guid>https://aryabhanushali.github.io/aryabhanushali-blog/projects/my-first-project/</guid>
+      <guid>https://aryabhanushali.github.io/blog/projects/my-first-project/</guid>
       <description>&lt;p&gt;🚀 &lt;strong&gt;Patient Tracking System Demo&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This project is a patient tracking system that helps hospitals and clinics monitor patient progress and improve healthcare outcomes.&lt;/p&gt;</description>
     </item>

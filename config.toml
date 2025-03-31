@@ -1,4 +1,4 @@
-baseURL = 'https://aryabhanushali.github.io/aryabhanushali-blog/'
+baseURL = 'https://aryabhanushali.github.io/blog/'
 languageCode = 'en-us'
 title = 'Arya Bhanushali Blog'
 theme = 'PaperMod'
