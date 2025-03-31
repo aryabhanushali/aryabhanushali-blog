@@ -8,6 +8,8 @@ draft: false
 
 This project is a patient tracking system that helps hospitals and clinics monitor patient progress and improve healthcare outcomes.
 
+---
+
 ## 📹 Demo Video
 
 <video width="700" controls>
