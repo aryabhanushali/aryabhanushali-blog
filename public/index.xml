@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Arya Bhanushali Blog</title>
+    <link>https://aryabhanushali.github.io/blog/</link>
+    <description>Recent content on Arya Bhanushali Blog</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Mar 2025 13:59:12 -0400</lastBuildDate>
+    <atom:link href="https://aryabhanushali.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>https://aryabhanushali.github.io/blog/posts/my-first-post/</link>
+      <pubDate>Mon, 31 Mar 2025 13:59:12 -0400</pubDate>
+      <guid>https://aryabhanushali.github.io/blog/posts/my-first-post/</guid>
+      <description>&lt;p&gt;Welcome to my first post on Arya Bhanushali&amp;rsquo;s blog! 🎉&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>https://aryabhanushali.github.io/blog/about/</link>
+      <pubDate>Mon, 31 Mar 2025 12:00:00 +0000</pubDate>
+      <guid>https://aryabhanushali.github.io/blog/about/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m Arya Bhanushali, a Computer Science student specializing in AI and HCI at Georgia Tech.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Patient Tracking System</title>
+      <link>https://aryabhanushali.github.io/blog/projects/my-first-project/</link>
+      <pubDate>Mon, 31 Mar 2025 10:00:00 +0000</pubDate>
+      <guid>https://aryabhanushali.github.io/blog/projects/my-first-project/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Patient Tracking System&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This project is a patient tracking system that helps hospitals and clinics monitor patient progress and improve healthcare outcomes.&lt;/p&gt;
+&lt;h2 id=&#34;-demo-video&#34;&gt;📹 Demo Video&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;</description>
+    </item>
+  </channel>
+</rss>
