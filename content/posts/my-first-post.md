@@ -42,3 +42,16 @@ we zeroed out every other channel except our face‑selective ones.
 Again, we measured recognition accuracy on the same face set.
 
 If those handful of channels alone can still drive good face performance, then they are sufficient: they carry enough information, by themselves, to solve the task.
+![<# alt text #>](../../../../../var/folders/b5/p80xxy0s78g2hsqcb735yqqc0000gn/T/TemporaryItems/NSIRD_screencaptureui_jUi09t/Screenshot%202025-04-17%20at%2010.46.22%E2%80%AFPM.png "Screenshot")
+
+
+
+
+![<# alt text #>](../../../../../var/folders/b5/p80xxy0s78g2hsqcb735yqqc0000gn/T/TemporaryItems/NSIRD_screencaptureui_KeiAi2/Screenshot%202025-04-17%20at%2010.46.38%E2%80%AFPM.png "Screenshot")
+![<# alt text #>](../../../../../var/folders/b5/p80xxy0s78g2hsqcb735yqqc0000gn/T/TemporaryItems/NSIRD_screencaptureui_jwg4V9/Screenshot%202025-04-17%20at%2010.46.51%E2%80%AFPM.png "Screenshot")
+![<# alt text #>](../../../../../var/folders/b5/p80xxy0s78g2hsqcb735yqqc0000gn/T/TemporaryItems/NSIRD_screencaptureui_W48QR0/Screenshot%202025-04-17%20at%2010.47.20%E2%80%AFPM.png "Screenshot")
+
+
+![<# alt text #>](../../../../../var/folders/b5/p80xxy0s78g2hsqcb735yqqc0000gn/T/TemporaryItems/NSIRD_screencaptureui_8WLuwQ/Screenshot%202025-04-17%20at%2010.47.43%E2%80%AFPM.png "Screenshot")
+
+
