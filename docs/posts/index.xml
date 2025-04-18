@@ -6,8 +6,27 @@
     <description>Recent content in Posts on Arya Bhanushali Blog</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Mar 2025 13:59:12 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 17 Apr 2025 23:14:38 -0400</lastBuildDate>
     <atom:link href="https://aryabhanushali.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Feature Visualization</title>
+      <link>https://aryabhanushali.github.io/blog/posts/feature-visualization/</link>
+      <pubDate>Thu, 17 Apr 2025 23:14:38 -0400</pubDate>
+      <guid>https://aryabhanushali.github.io/blog/posts/feature-visualization/</guid>
+      <description>&lt;h1 id=&#34;feature-visualization&#34;&gt;Feature Visualization&lt;/h1&gt;
+&lt;p&gt;In this project, I dove into &lt;strong&gt;feature visualization&lt;/strong&gt;—the practice of generating images that maximally activate specific neurons or layers in a deep network. By using the &lt;strong&gt;torch‑dreams&lt;/strong&gt; library together with pretrained models (Inception v3 and ResNet‑18), I was able to “peek under the hood” and see exactly what each filter is looking for.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;installing-and-setting-up&#34;&gt;Installing and Setting Up&lt;/h2&gt;
+&lt;p&gt;First, I installed the core library:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;torch‑dreams&lt;/code&gt;&lt;/strong&gt; brings a simple interface for activation maximization.&lt;/li&gt;
+&lt;li&gt;I loaded PyTorch’s pretrained &lt;strong&gt;Inception v3&lt;/strong&gt; and &lt;strong&gt;ResNet‑18&lt;/strong&gt; models, switching them to evaluation mode on the GPU.&lt;/li&gt;
+&lt;li&gt;Basic image preprocessing (resize, normalization) was applied so the generated “dreams” would respect ImageNet conventions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-midlevel-texture-dreams&#34;&gt;1. Mid‑Level Texture Dreams&lt;/h2&gt;
+&lt;p&gt;I began by asking the Dreamer to visualize the &lt;strong&gt;Mixed_5b&lt;/strong&gt; block of Inception v3—an intermediate layer known to detect textures and simple shape combinations:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Face Selective Neuron Experiment</title>
       <link>https://aryabhanushali.github.io/blog/posts/my-first-post/</link>
