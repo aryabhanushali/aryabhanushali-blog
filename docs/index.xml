@@ -13,14 +13,74 @@
       <link>https://aryabhanushali.github.io/blog/posts/my-first-post/</link>
       <pubDate>Mon, 31 Mar 2025 13:59:12 -0400</pubDate>
       <guid>https://aryabhanushali.github.io/blog/posts/my-first-post/</guid>
-      <description>&lt;hr&gt;
-&lt;h2 id=&#34;face-selective-neuron-experiment&#34;&gt;Face Selective Neuron Experiment:&lt;/h2&gt;
-&lt;p&gt;In this experiment, our goal was to test whether the “face‑selective” neurons that&lt;br&gt;
-appear in TopoNet models (ResNet‑18) are both necessary and sufficient&lt;br&gt;
-to identify faces. We used the CelebA dataset as our face stimulus.&lt;/p&gt;
+      <description>&lt;h2 id=&#34;faceselective-neuron-experiments&#34;&gt;Face‑Selective Neuron Experiments&lt;/h2&gt;
+&lt;h2 id=&#34;in-this-set-of-experiments-i-set-out-to-determine-whether-the-neurons-in-a-toponet-model-that-appear-to-light-up-for-faces-are-truly-necessary-and-sufficient-for-face-discrimination&#34;&gt;In this set of experiments I set out to determine whether the neurons in a TopoNet model that appear to “light up” for faces are truly &lt;strong&gt;necessary&lt;/strong&gt; and &lt;strong&gt;sufficient&lt;/strong&gt; for face discrimination.&lt;/h2&gt;
+&lt;h3 id=&#34;1-activation-extraction&#34;&gt;1. Activation Extraction&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Forward Hook&lt;/strong&gt;&lt;br&gt;
+I attached a PyTorch forward‑hook to the final convolutional block (&lt;code&gt;layer4&lt;/code&gt;) of a pretrained TopoNet (ResNet‑18).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Collection&lt;/strong&gt;&lt;br&gt;
+I ran &lt;strong&gt;1,000&lt;/strong&gt; face images from the CelebA dataset through the model.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Feature Vector&lt;/strong&gt;&lt;br&gt;
+For each image, I collapsed each channel’s H×W activation map to its mean—yielding a single scalar activation per channel. This produced a &lt;strong&gt;1,000 × C&lt;/strong&gt; activation matrix.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;1-activation&#34;&gt;1. Activation&lt;/h3&gt;
-&lt;p&gt;We “hooked” into the TopoNet’s last convolutional layer (layer4) so that every time an image passed through the network, we captured the raw activation values of all channels at that layer.&lt;/p&gt;</description>
+&lt;h3 id=&#34;2-pca-for-identifying-faceselective-neurons&#34;&gt;2. PCA for Identifying Face‑Selective Neurons&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fit PCA&lt;/strong&gt;&lt;br&gt;
+I performed Principal Component Analysis on the 1,000 × C matrix to understand which channels carried the most variance when processing faces.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Channel Ranking&lt;/strong&gt;&lt;br&gt;
+I also computed each channel’s mean activation across all face images and selected the &lt;strong&gt;top 5 %&lt;/strong&gt; of channels (above the 95th percentile) as candidate &lt;strong&gt;face‑selective neurons&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-necessity-test-lesion-experiment&#34;&gt;3. Necessity Test (Lesion Experiment)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Lesion Hook&lt;/strong&gt;&lt;br&gt;
+I modified the forward hook to &lt;strong&gt;zero out&lt;/strong&gt; only the face‑selective channels during inference.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Re‑Inference&lt;/strong&gt;&lt;br&gt;
+Running the same 1,000 face images through the lesioned model, I captured the new activations.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Metrics&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Recognition Accuracy&lt;/strong&gt;: I passed the lesioned activations through a simple classifier head (e.g., logistic regression) to measure drop in face‑vs‑non‑face accuracy.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PCA Explained Variance&lt;/strong&gt;: I refit PCA on the lesioned activations and plotted the cumulative variance curve.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;br&gt;
+A sharp drop in accuracy and explained variance confirmed these neurons are &lt;strong&gt;necessary&lt;/strong&gt;—the network truly relies on them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-sufficiency-test&#34;&gt;4. Sufficiency Test&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Inverse Lesion&lt;/strong&gt;&lt;br&gt;
+I zeroed out &lt;strong&gt;all other&lt;/strong&gt; channels except the face‑selective ones, effectively isolating the candidate neurons.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Re‑Inference &amp;amp; Metrics&lt;/strong&gt;&lt;br&gt;
+I measured classifier accuracy and PCA variance again on that reduced activation set.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;br&gt;
+If accuracy remained high and PCA variance curve closely matched the baseline, it demonstrated those channels alone are &lt;strong&gt;sufficient&lt;/strong&gt; to drive face discrimination.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;5-control-lesion-random-neurons&#34;&gt;5. Control Lesion (Random Neurons)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Random Subset&lt;/strong&gt;&lt;br&gt;
+To verify specificity, I repeated the lesion procedure on a &lt;strong&gt;random&lt;/strong&gt; subset of channels (same size as the face‑selective group).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Comparison&lt;/strong&gt;&lt;br&gt;
+The random‑lesioned PCA and accuracy curves performed much worse than the face‑lesioned curves, confirming the unique importance of the face‑selective neurons.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;6-spatial-visualization&#34;&gt;6. Spatial Visualization&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Heatmap&lt;/strong&gt;&lt;br&gt;
+For a single example image, I visualized the spatial activation map of one face‑selective channel—showing exactly where on the face it responds most strongly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;7-more-analysis&#34;&gt;7. More Analysis&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scene &amp;amp; Object Datasets&lt;/strong&gt;&lt;br&gt;
+I collected activations on Places365 (scenes) and CIFAR10 (objects) using the same face‑selective hook.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Activation Comparison&lt;/strong&gt;&lt;br&gt;
+I compared the mean activation of the face‑selective channels across faces, scenes, and objects—demonstrating they respond more to faces.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;</description>
     </item>
     <item>
       <title>About Me</title>
