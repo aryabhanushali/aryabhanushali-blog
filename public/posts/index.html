@@ -149,19 +149,45 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">1 Month at Murty Lab
+    <h2 class="entry-hint-parent">Feature Visualization
     </h2>
   </header>
   <div class="entry-content">
-    <p>Welcome to my first post on Arya Bhanushali’s blog! 🎉
-Face Selective Neuron Experiment:
-In this experiment, our goal was to test whether the “face‑selective” neurons that appear in TopoNet models (ResNet‑18) are both necessary and sufficient to identify faces. We used the CelebA dataset as our face stimulus.
-1.Activation
-We “hooked” into the TopoNet’s last convolutional layer (layer4) so that every time an image passed through the network, we captured the raw activation values of all channels at that layer.
+    <p>Feature Visualization In this project, I dove into feature visualization—the practice of generating images that maximally activate specific neurons or layers in a deep network. By using the torch‑dreams library together with pretrained models (Inception v3 and ResNet‑18), I was able to “peek under the hood” and see exactly what each filter is looking for.
+Installing and Setting Up First, I installed the core library:
+torch‑dreams brings a simple interface for activation maximization. I loaded PyTorch’s pretrained Inception v3 and ResNet‑18 models, switching them to evaluation mode on the GPU. Basic image preprocessing (resize, normalization) was applied so the generated “dreams” would respect ImageNet conventions. 1. Mid‑Level Texture Dreams I began by asking the Dreamer to visualize the Mixed_5b block of Inception v3—an intermediate layer known to detect textures and simple shape combinations:
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-03-31 13:59:12 -0400 EDT'>March 31, 2025</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to 1 Month at Murty Lab" href="https://aryabhanushali.github.io/blog/posts/my-first-post/"></a>
+  <footer class="entry-footer"><span title='2025-04-17 23:14:38 -0400 EDT'>April 17, 2025</span>&nbsp;·&nbsp;3 min</footer>
+  <a class="entry-link" aria-label="post link to Feature Visualization" href="https://aryabhanushali.github.io/blog/posts/feature-visualization/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Face Selective Neuron Experiment
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Face‑Selective Neuron Experiments In this set of experiments I set out to determine whether the neurons in a TopoNet model that appear to “light up” for faces are truly necessary and sufficient for face discrimination. 1. Activation Extraction Forward Hook
+I attached a PyTorch forward‑hook to the final convolutional block (layer4) of a pretrained TopoNet (ResNet‑18). Data Collection
+I ran 1,000 face images from the CelebA dataset through the model. Feature Vector
+For each image, I collapsed each channel’s H×W activation map to its mean—yielding a single scalar activation per channel. This produced a 1,000 × C activation matrix. 2. PCA for Identifying Face‑Selective Neurons Fit PCA
+I performed Principal Component Analysis on the 1,000 × C matrix to understand which channels carried the most variance when processing faces. Channel Ranking
+I also computed each channel’s mean activation across all face images and selected the top 5 % of channels (above the 95th percentile) as candidate face‑selective neurons. 3. Necessity Test (Lesion Experiment) Lesion Hook
+I modified the forward hook to zero out only the face‑selective channels during inference. Re‑Inference
+Running the same 1,000 face images through the lesioned model, I captured the new activations. Metrics Recognition Accuracy: I passed the lesioned activations through a simple classifier head (e.g., logistic regression) to measure drop in face‑vs‑non‑face accuracy. PCA Explained Variance: I refit PCA on the lesioned activations and plotted the cumulative variance curve. Conclusion
+A sharp drop in accuracy and explained variance confirmed these neurons are necessary—the network truly relies on them. 4. Sufficiency Test Inverse Lesion
+I zeroed out all other channels except the face‑selective ones, effectively isolating the candidate neurons. Re‑Inference &amp; Metrics
+I measured classifier accuracy and PCA variance again on that reduced activation set. Conclusion
+If accuracy remained high and PCA variance curve closely matched the baseline, it demonstrated those channels alone are sufficient to drive face discrimination. 5. Control Lesion (Random Neurons) Random Subset
+To verify specificity, I repeated the lesion procedure on a random subset of channels (same size as the face‑selective group). Comparison
+The random‑lesioned PCA and accuracy curves performed much worse than the face‑lesioned curves, confirming the unique importance of the face‑selective neurons. 6. Spatial Visualization Heatmap
+For a single example image, I visualized the spatial activation map of one face‑selective channel—showing exactly where on the face it responds most strongly. 7. More Analysis Scene &amp; Object Datasets
+I collected activations on Places365 (scenes) and CIFAR10 (objects) using the same face‑selective hook. Activation Comparison
+I compared the mean activation of the face‑selective channels across faces, scenes, and objects—demonstrating they respond more to faces. </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-31 13:59:12 -0400 EDT'>March 31, 2025</span>&nbsp;·&nbsp;3 min</footer>
+  <a class="entry-link" aria-label="post link to Face Selective Neuron Experiment" href="https://aryabhanushali.github.io/blog/posts/my-first-post/"></a>
 </article>
     </main>
     

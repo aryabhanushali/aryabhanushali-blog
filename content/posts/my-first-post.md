@@ -1,5 +1,5 @@
 ---
-title: "Face Selective Neuron Experiment"
+title: "First Experiment at Murty Lab: Face Selective Neurons"
 date: 2025-03-31T13:59:12-04:00
 draft: false
 ---
