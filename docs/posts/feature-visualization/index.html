@@ -8,18 +8,15 @@
 <title>Feature Visualization | Arya Bhanushali Blog</title>
 <meta name="keywords" content="">
 <meta name="description" content="Feature Visualization
-In this project, I dove into feature visualization—the practice of generating images that maximally activate specific neurons or layers in a deep network. By using the torch‑dreams library together with pretrained models (Inception v3 and ResNet‑18), I was able to “peek under the hood” and see exactly what each filter is looking for.
+In this project, I explored feature visualization, which generates images that maximally activate specific layers and channels in deep networks. Using the torch‑dreams library with pretrained Inception v3 and ResNet‑18 models, I was able to:
 
-Installing and Setting Up
-First, I installed the core library:
+Load and configure models for activation maximization.
+Visualize mid‑level textures and patterns.
+Fine‑tune hyperparameters for clearer results.
+Inspect individual channels with custom objectives.
+Add a neuron‑by‑neuron montage to survey entire layers.
 
-torch‑dreams brings a simple interface for activation maximization.
-I loaded PyTorch’s pretrained Inception v3 and ResNet‑18 models, switching them to evaluation mode on the GPU.
-Basic image preprocessing (resize, normalization) was applied so the generated “dreams” would respect ImageNet conventions.
-
-
-1. Mid‑Level Texture Dreams
-I began by asking the Dreamer to visualize the Mixed_5b block of Inception v3—an intermediate layer known to detect textures and simple shape combinations:">
+Feature visualization shows us what neurons or layers in a neural network &ldquo;see.&rdquo; We start with random noise and tweak the image so a chosen part of the network lights up. The final &ldquo;dream&rdquo; image highlights the patterns—like edges, textures, and shapes—that the network uses to make decisions.">
 <meta name="author" content="">
 <link rel="canonical" href="https://aryabhanushali.github.io/blog/posts/feature-visualization/">
 <link crossorigin="anonymous" href="/blog/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
@@ -70,9 +67,8 @@ I began by asking the Dreamer to visualize the Mixed_5b block of Inception v3�
 </noscript><meta property="og:url" content="https://aryabhanushali.github.io/blog/posts/feature-visualization/">
   <meta property="og:site_name" content="Arya Bhanushali Blog">
   <meta property="og:title" content="Feature Visualization">
-  <meta property="og:description" content="Feature Visualization In this project, I dove into feature visualization—the practice of generating images that maximally activate specific neurons or layers in a deep network. By using the torch‑dreams library together with pretrained models (Inception v3 and ResNet‑18), I was able to “peek under the hood” and see exactly what each filter is looking for.
-Installing and Setting Up First, I installed the core library:
-torch‑dreams brings a simple interface for activation maximization. I loaded PyTorch’s pretrained Inception v3 and ResNet‑18 models, switching them to evaluation mode on the GPU. Basic image preprocessing (resize, normalization) was applied so the generated “dreams” would respect ImageNet conventions. 1. Mid‑Level Texture Dreams I began by asking the Dreamer to visualize the Mixed_5b block of Inception v3—an intermediate layer known to detect textures and simple shape combinations:">
+  <meta property="og:description" content="Feature Visualization In this project, I explored feature visualization, which generates images that maximally activate specific layers and channels in deep networks. Using the torch‑dreams library with pretrained Inception v3 and ResNet‑18 models, I was able to:
+Load and configure models for activation maximization. Visualize mid‑level textures and patterns. Fine‑tune hyperparameters for clearer results. Inspect individual channels with custom objectives. Add a neuron‑by‑neuron montage to survey entire layers. Feature visualization shows us what neurons or layers in a neural network “see.” We start with random noise and tweak the image so a chosen part of the network lights up. The final “dream” image highlights the patterns—like edges, textures, and shapes—that the network uses to make decisions.">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -81,18 +77,15 @@ torch‑dreams brings a simple interface for activation maximization. I loaded P
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Feature Visualization">
 <meta name="twitter:description" content="Feature Visualization
-In this project, I dove into feature visualization—the practice of generating images that maximally activate specific neurons or layers in a deep network. By using the torch‑dreams library together with pretrained models (Inception v3 and ResNet‑18), I was able to “peek under the hood” and see exactly what each filter is looking for.
+In this project, I explored feature visualization, which generates images that maximally activate specific layers and channels in deep networks. Using the torch‑dreams library with pretrained Inception v3 and ResNet‑18 models, I was able to:
 
-Installing and Setting Up
-First, I installed the core library:
+Load and configure models for activation maximization.
+Visualize mid‑level textures and patterns.
+Fine‑tune hyperparameters for clearer results.
+Inspect individual channels with custom objectives.
+Add a neuron‑by‑neuron montage to survey entire layers.
 
-torch‑dreams brings a simple interface for activation maximization.
-I loaded PyTorch’s pretrained Inception v3 and ResNet‑18 models, switching them to evaluation mode on the GPU.
-Basic image preprocessing (resize, normalization) was applied so the generated “dreams” would respect ImageNet conventions.
-
-
-1. Mid‑Level Texture Dreams
-I began by asking the Dreamer to visualize the Mixed_5b block of Inception v3—an intermediate layer known to detect textures and simple shape combinations:">
+Feature visualization shows us what neurons or layers in a neural network &ldquo;see.&rdquo; We start with random noise and tweak the image so a chosen part of the network lights up. The final &ldquo;dream&rdquo; image highlights the patterns—like edges, textures, and shapes—that the network uses to make decisions.">
 
 
 <script type="application/ld+json">
@@ -121,12 +114,12 @@ I began by asking the Dreamer to visualize the Mixed_5b block of Inception v3�
   "@type": "BlogPosting",
   "headline": "Feature Visualization",
   "name": "Feature Visualization",
-  "description": "Feature Visualization In this project, I dove into feature visualization—the practice of generating images that maximally activate specific neurons or layers in a deep network. By using the torch‑dreams library together with pretrained models (Inception v3 and ResNet‑18), I was able to “peek under the hood” and see exactly what each filter is looking for.\nInstalling and Setting Up First, I installed the core library:\ntorch‑dreams brings a simple interface for activation maximization. I loaded PyTorch’s pretrained Inception v3 and ResNet‑18 models, switching them to evaluation mode on the GPU. Basic image preprocessing (resize, normalization) was applied so the generated “dreams” would respect ImageNet conventions. 1. Mid‑Level Texture Dreams I began by asking the Dreamer to visualize the Mixed_5b block of Inception v3—an intermediate layer known to detect textures and simple shape combinations:\n",
+  "description": "Feature Visualization In this project, I explored feature visualization, which generates images that maximally activate specific layers and channels in deep networks. Using the torch‑dreams library with pretrained Inception v3 and ResNet‑18 models, I was able to:\nLoad and configure models for activation maximization. Visualize mid‑level textures and patterns. Fine‑tune hyperparameters for clearer results. Inspect individual channels with custom objectives. Add a neuron‑by‑neuron montage to survey entire layers. Feature visualization shows us what neurons or layers in a neural network \u0026ldquo;see.\u0026rdquo; We start with random noise and tweak the image so a chosen part of the network lights up. The final \u0026ldquo;dream\u0026rdquo; image highlights the patterns—like edges, textures, and shapes—that the network uses to make decisions.\n",
   "keywords": [
     
   ],
-  "articleBody": "Feature Visualization In this project, I dove into feature visualization—the practice of generating images that maximally activate specific neurons or layers in a deep network. By using the torch‑dreams library together with pretrained models (Inception v3 and ResNet‑18), I was able to “peek under the hood” and see exactly what each filter is looking for.\nInstalling and Setting Up First, I installed the core library:\ntorch‑dreams brings a simple interface for activation maximization. I loaded PyTorch’s pretrained Inception v3 and ResNet‑18 models, switching them to evaluation mode on the GPU. Basic image preprocessing (resize, normalization) was applied so the generated “dreams” would respect ImageNet conventions. 1. Mid‑Level Texture Dreams I began by asking the Dreamer to visualize the Mixed_5b block of Inception v3—an intermediate layer known to detect textures and simple shape combinations:\nThe Dreamer starts from random noise. It repeatedly perturbs the pixels to maximize the average activation of Mixed_5b’s filters. After a few dozen iterations, the output coalesced into swirling color gradients, edge junctions, and repeating motifs. What I learned:\nMid‑level filters act like texture and pattern detectors—when you amplify their responses, you get artwork that resembles woven fabrics, rippling water, or feather‑like structures.\n2. Tuning the Dream Next, I experimented with optimization parameters:\nIteration count and learning rate determine how far the image can evolve. Rotations, scaling, and translation prevent the network from “cheating” by focusing on a single spot. Weight decay and gradient clipping keep the dream from exploding into noise. By gently adjusting these settings, the resulting images became sharper, more coherent, and richer in semantic detail.\n3. Channel‑Specific Visualization Rather than visualizing an entire layer, I targeted a single channel within a convolutional block:\nI wrote a custom loss that returns the negative mean activation of channel Y, forcing the optimizer to boost that channel’s response. After optimization, the dream revealed the unique “signature” pattern to which that channel is most sensitive—whether it was circular blobs, striped edges, or high‑frequency textures. What I learned:\nEach convolutional filter is its own mini‑detector. By visualizing one at a time, you can assign intuitive labels (“this neuron is a corner detector,” “that neuron fires on yellow gradients,” etc.).\n4. Multi‑Model, Multi‑Layer Dreams To push things further, I combined two architectures:\nI wrapped Inception v3 and ResNet‑18 into a single ModelBunch. I asked the Dreamer to maximize both a mid‑level Inception block and a specific ResNet channel simultaneously. The resulting images fused characteristics from both networks—creating hybrid patterns that both models found highly activating. What I learned:\nJoint visualization lets you explore the intersection of features across architectures, hinting at shared representational motifs and subtle differences in how networks process visual information.\n5. Building a Montage Finally, I saved individual channel dreams to disk and arranged them into a grid:\nBy plotting a mosaic of 64 channel images, I could compare dozens of filters at once. Patterns ranged from floral‑like swirls to grid textures and radial spokes. What I learned:\nMontages are a powerful way to survey an entire layer’s diversity at a glance—great for spotting redundant filters or identifying intriguing outliers.\nTakeaways Textures to Semantics: Early and mid‑level layers capture color gradients, textures, and simple shapes. Custom Loss Functions: Targeted objectives unlock neuron‑specific insights. Cross‑Model Exploration: Visualizing multiple networks together reveals both commonalities and unique patterns. Interpretability at Scale: Montage displays help scale up from a handful of neurons to entire layers. ",
-  "wordCount" : "565",
+  "articleBody": "Feature Visualization In this project, I explored feature visualization, which generates images that maximally activate specific layers and channels in deep networks. Using the torch‑dreams library with pretrained Inception v3 and ResNet‑18 models, I was able to:\nLoad and configure models for activation maximization. Visualize mid‑level textures and patterns. Fine‑tune hyperparameters for clearer results. Inspect individual channels with custom objectives. Add a neuron‑by‑neuron montage to survey entire layers. Feature visualization shows us what neurons or layers in a neural network “see.” We start with random noise and tweak the image so a chosen part of the network lights up. The final “dream” image highlights the patterns—like edges, textures, and shapes—that the network uses to make decisions.\nThe feature visualization script performs the following steps:\nImports \u0026 Model Loading\nIt imports torch-dreams, torchvision.models, and matplotlib. Pretrained Inception v3 and ResNet‑18 models are loaded and switched to evaluation mode on the GPU.\nDreamer Setup\nA Dreamer object wraps the model (or multiple models) to provide a .render method for activation maximization.\nLayer \u0026 Channel Selection\nSpecific layers (e.g., Mixed_5b) or single channels are chosen by passing layer references or custom loss functions to .render.\nRendering Images\nThe .render method starts from random noise and iteratively updates pixel values to maximize activations, with options for iteration count, learning rate, geometric transforms, and regularization.\nCustom Objectives\nA custom function can target one channel’s mean activation, returning -activation so the optimizer maximizes that channel’s response.\nNeuron Grid Montage\nRendered images for each channel are saved and then laid out in a grid, enabling side‑by‑side comparison of individual neuron preferences.\nNeuron‑by‑Neuron Montage For each neuron (i.e., each channel in the layer), I ran the dream algorithm separately to generate its ideal input pattern.\nThis produced a unique image for neuron 0, neuron 1, and so on.\nI organized these images into rows and columns so that I could compare every neuron side by side.\nKey point: Neuron‑by‑neuron visualization shows the individual “preferences” of each filter, and grid layouts scale up interpretability across an entire layer.\n",
+  "wordCount" : "339",
   "inLanguage": "en",
   "datePublished": "2025-04-17T23:14:38-04:00",
   "dateModified": "2025-04-17T23:14:38-04:00",
@@ -212,7 +205,7 @@ I began by asking the Dreamer to visualize the Mixed_5b block of Inception v3�
     <h1 class="post-title entry-hint-parent">
       Feature Visualization
     </h1>
-    <div class="post-meta"><span title='2025-04-17 23:14:38 -0400 EDT'>April 17, 2025</span>&nbsp;·&nbsp;3 min
+    <div class="post-meta"><span title='2025-04-17 23:14:38 -0400 EDT'>April 17, 2025</span>&nbsp;·&nbsp;2 min
 
 </div>
   </header> <div class="toc">
@@ -226,19 +219,7 @@ I began by asking the Dreamer to visualize the Mixed_5b block of Inception v3�
                     <a href="#feature-visualization" aria-label="Feature Visualization">Feature Visualization</a><ul>
                         
                 <li>
-                    <a href="#installing-and-setting-up" aria-label="Installing and Setting Up">Installing and Setting Up</a></li>
-                <li>
-                    <a href="#1-midlevel-texture-dreams" aria-label="1. Mid‑Level Texture Dreams">1. Mid‑Level Texture Dreams</a></li>
-                <li>
-                    <a href="#2-tuning-the-dream" aria-label="2. Tuning the Dream">2. Tuning the Dream</a></li>
-                <li>
-                    <a href="#3-channelspecific-visualization" aria-label="3. Channel‑Specific Visualization">3. Channel‑Specific Visualization</a></li>
-                <li>
-                    <a href="#4-multimodel-multilayer-dreams" aria-label="4. Multi‑Model, Multi‑Layer Dreams">4. Multi‑Model, Multi‑Layer Dreams</a></li>
-                <li>
-                    <a href="#5-building-a-montage" aria-label="5. Building a Montage">5. Building a Montage</a></li>
-                <li>
-                    <a href="#takeaways" aria-label="Takeaways">Takeaways</a>
+                    <a href="#neuronbyneuron-montage" aria-label="Neuron‑by‑Neuron Montage">Neuron‑by‑Neuron Montage</a>
                 </li>
             </ul>
             </li>
@@ -248,70 +229,50 @@ I began by asking the Dreamer to visualize the Mixed_5b block of Inception v3�
 </div>
 
   <div class="post-content"><h1 id="feature-visualization">Feature Visualization<a hidden class="anchor" aria-hidden="true" href="#feature-visualization">#</a></h1>
-<p>In this project, I dove into <strong>feature visualization</strong>—the practice of generating images that maximally activate specific neurons or layers in a deep network. By using the <strong>torch‑dreams</strong> library together with pretrained models (Inception v3 and ResNet‑18), I was able to “peek under the hood” and see exactly what each filter is looking for.</p>
-<hr>
-<h2 id="installing-and-setting-up">Installing and Setting Up<a hidden class="anchor" aria-hidden="true" href="#installing-and-setting-up">#</a></h2>
-<p>First, I installed the core library:</p>
+<p>In this project, I explored <strong>feature visualization</strong>, which generates images that maximally activate specific layers and channels in deep networks. Using the <strong>torch‑dreams</strong> library with pretrained Inception v3 and ResNet‑18 models, I was able to:</p>
 <ul>
-<li><strong><code>torch‑dreams</code></strong> brings a simple interface for activation maximization.</li>
-<li>I loaded PyTorch’s pretrained <strong>Inception v3</strong> and <strong>ResNet‑18</strong> models, switching them to evaluation mode on the GPU.</li>
-<li>Basic image preprocessing (resize, normalization) was applied so the generated “dreams” would respect ImageNet conventions.</li>
+<li>Load and configure models for activation maximization.</li>
+<li>Visualize mid‑level textures and patterns.</li>
+<li>Fine‑tune hyperparameters for clearer results.</li>
+<li>Inspect individual channels with custom objectives.</li>
+<li>Add a neuron‑by‑neuron montage to survey entire layers.</li>
 </ul>
+<p>Feature visualization shows us what neurons or layers in a neural network &ldquo;see.&rdquo; We start with random noise and tweak the image so a chosen part of the network lights up. The final &ldquo;dream&rdquo; image highlights the patterns—like edges, textures, and shapes—that the network uses to make decisions.</p>
 <hr>
-<h2 id="1-midlevel-texture-dreams">1. Mid‑Level Texture Dreams<a hidden class="anchor" aria-hidden="true" href="#1-midlevel-texture-dreams">#</a></h2>
-<p>I began by asking the Dreamer to visualize the <strong>Mixed_5b</strong> block of Inception v3—an intermediate layer known to detect textures and simple shape combinations:</p>
+<p>The feature visualization script performs the following steps:</p>
 <ol>
-<li>The Dreamer starts from random noise.</li>
-<li>It repeatedly perturbs the pixels to maximize the average activation of Mixed_5b’s filters.</li>
-<li>After a few dozen iterations, the output coalesced into swirling color gradients, edge junctions, and repeating motifs.</li>
+<li>
+<p><strong>Imports &amp; Model Loading</strong><br>
+It imports <code>torch-dreams</code>, <code>torchvision.models</code>, and <code>matplotlib</code>. Pretrained Inception v3 and ResNet‑18 models are loaded and switched to evaluation mode on the GPU.</p>
+</li>
+<li>
+<p><strong>Dreamer Setup</strong><br>
+A <code>Dreamer</code> object wraps the model (or multiple models) to provide a <code>.render</code> method for activation maximization.</p>
+</li>
+<li>
+<p><strong>Layer &amp; Channel Selection</strong><br>
+Specific layers (e.g., <code>Mixed_5b</code>) or single channels are chosen by passing layer references or custom loss functions to <code>.render</code>.</p>
+</li>
+<li>
+<p><strong>Rendering Images</strong><br>
+The <code>.render</code> method starts from random noise and iteratively updates pixel values to maximize activations, with options for iteration count, learning rate, geometric transforms, and regularization.</p>
+</li>
+<li>
+<p><strong>Custom Objectives</strong><br>
+A custom function can target one channel’s mean activation, returning <code>-activation</code> so the optimizer maximizes that channel’s response.</p>
+</li>
+<li>
+<p><strong>Neuron Grid Montage</strong><br>
+Rendered images for each channel are saved and then laid out in a grid, enabling side‑by‑side comparison of individual neuron preferences.</p>
+</li>
 </ol>
-<p><strong>What I learned:</strong><br>
-Mid‑level filters act like texture and pattern detectors—when you amplify their responses, you get artwork that resembles woven fabrics, rippling water, or feather‑like structures.</p>
 <hr>
-<h2 id="2-tuning-the-dream">2. Tuning the Dream<a hidden class="anchor" aria-hidden="true" href="#2-tuning-the-dream">#</a></h2>
-<p>Next, I experimented with optimization parameters:</p>
-<ul>
-<li><strong>Iteration count</strong> and <strong>learning rate</strong> determine how far the image can evolve.</li>
-<li><strong>Rotations, scaling, and translation</strong> prevent the network from “cheating” by focusing on a single spot.</li>
-<li><strong>Weight decay</strong> and <strong>gradient clipping</strong> keep the dream from exploding into noise.</li>
-</ul>
-<p>By gently adjusting these settings, the resulting images became sharper, more coherent, and richer in semantic detail.</p>
+<h2 id="neuronbyneuron-montage">Neuron‑by‑Neuron Montage<a hidden class="anchor" aria-hidden="true" href="#neuronbyneuron-montage">#</a></h2>
+<p>For each neuron (i.e., each channel in the layer), I ran the dream algorithm separately to generate its ideal input pattern.</p>
+<p>This produced a unique image for neuron 0, neuron 1, and so on.</p>
+<p>I organized these images into rows and columns so that I could compare every neuron side by side.</p>
+<p>Key point: Neuron‑by‑neuron visualization shows the individual “preferences” of each filter, and grid layouts scale up interpretability across an entire layer.</p>
 <hr>
-<h2 id="3-channelspecific-visualization">3. Channel‑Specific Visualization<a hidden class="anchor" aria-hidden="true" href="#3-channelspecific-visualization">#</a></h2>
-<p>Rather than visualizing an entire layer, I targeted a <strong>single channel</strong> within a convolutional block:</p>
-<ol>
-<li>I wrote a custom loss that returns the <em>negative</em> mean activation of channel Y, forcing the optimizer to boost that channel’s response.</li>
-<li>After optimization, the dream revealed the unique “signature” pattern to which that channel is most sensitive—whether it was circular blobs, striped edges, or high‑frequency textures.</li>
-</ol>
-<p><strong>What I learned:</strong><br>
-Each convolutional filter is its own mini‑detector. By visualizing one at a time, you can assign intuitive labels (“this neuron is a corner detector,” “that neuron fires on yellow gradients,” etc.).</p>
-<hr>
-<h2 id="4-multimodel-multilayer-dreams">4. Multi‑Model, Multi‑Layer Dreams<a hidden class="anchor" aria-hidden="true" href="#4-multimodel-multilayer-dreams">#</a></h2>
-<p>To push things further, I combined two architectures:</p>
-<ul>
-<li>I wrapped Inception v3 and ResNet‑18 into a single <strong>ModelBunch</strong>.</li>
-<li>I asked the Dreamer to maximize both a mid‑level Inception block and a specific ResNet channel simultaneously.</li>
-<li>The resulting images fused characteristics from both networks—creating hybrid patterns that both models found highly activating.</li>
-</ul>
-<p><strong>What I learned:</strong><br>
-Joint visualization lets you explore the intersection of features across architectures, hinting at shared representational motifs and subtle differences in how networks process visual information.</p>
-<hr>
-<h2 id="5-building-a-montage">5. Building a Montage<a hidden class="anchor" aria-hidden="true" href="#5-building-a-montage">#</a></h2>
-<p>Finally, I saved individual channel dreams to disk and arranged them into a grid:</p>
-<ul>
-<li>By plotting a mosaic of 64 channel images, I could compare dozens of filters at once.</li>
-<li>Patterns ranged from floral‑like swirls to grid textures and radial spokes.</li>
-</ul>
-<p><strong>What I learned:</strong><br>
-Montages are a powerful way to survey an entire layer’s diversity at a glance—great for spotting redundant filters or identifying intriguing outliers.</p>
-<hr>
-<h2 id="takeaways">Takeaways<a hidden class="anchor" aria-hidden="true" href="#takeaways">#</a></h2>
-<ol>
-<li><strong>Textures to Semantics:</strong> Early and mid‑level layers capture color gradients, textures, and simple shapes.</li>
-<li><strong>Custom Loss Functions:</strong> Targeted objectives unlock neuron‑specific insights.</li>
-<li><strong>Cross‑Model Exploration:</strong> Visualizing multiple networks together reveals both commonalities and unique patterns.</li>
-<li><strong>Interpretability at Scale:</strong> Montage displays help scale up from a handful of neurons to entire layers.</li>
-</ol>
 
 
   </div>
@@ -323,7 +284,7 @@ Montages are a powerful way to survey an entire layer’s diversity at a glance�
   <a class="next" href="https://aryabhanushali.github.io/blog/posts/my-first-post/">
     <span class="title">Next »</span>
     <br>
-    <span>Face Selective Neuron Experiment</span>
+    <span>First Experiment at Murty Lab: Face Selective Neurons</span>
   </a>
 </nav>
 
